@@ -1,0 +1,22 @@
+<h1>Lista de articulos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Articulo</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles">
+            <td>{{article.name}}</td>
+            <td>{{article.category}}</td>
+            <td>{{article.price | currency}}</td>
+            <td><span *ngIf="article.quantity>0">{{article.quantity}}</span><span class="badge text-bg-danger" *ngIf="article.quantity==0">Out of stock</span></td>
+            <td><img [src]="article.image" [alt]="article.name"></td>
+        </tr>
+    </tbody>
+</table>
