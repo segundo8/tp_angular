@@ -16,7 +16,7 @@
             <td>{{article.name}}</td>
             <td>{{article.category}}</td>
             <td>{{article.price | currency}}</td>
-            <td><span *ngIf="article.quantity>0">{{article.quantity}}</span><span class="badge text-bg-danger" *ngIf="article.quantity==0">Out of stock</span></td>
+            <td><span *ngIf="article.quantity>0">{{article.quantity}}</span><span class="badge text-bg-danger btn-stock" *ngIf="article.quantity==0">Out of stock</span></td>
             <td><img [src]="article.image" [alt]="article.name"></td>
             <td><button (click)="downProduct(article)">-</button>{{article.addproduct}}<button (click)="upProduct(article)">+</button></td>
         </tr>
