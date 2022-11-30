@@ -1,1 +1,7 @@
 <h3>Carrito</h3>
+
+<ul>
+    <li *ngFor="let articles of cartList">
+        {{articles.name}}: {{articles.addproduct}}
+    </li>
+</ul>

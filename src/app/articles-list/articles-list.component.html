@@ -19,6 +19,7 @@
             <td><span *ngIf="article.quantity>0">{{article.quantity}}</span><span class="badge text-bg-danger btn-stock" *ngIf="article.quantity==0">Out of stock</span></td>
             <td><img [src]="article.image" [alt]="article.name"></td>
             <td><button (click)="downProduct(article)">-</button>{{article.addproduct}}<button (click)="upProduct(article)">+</button></td>
+            <button class="btn btn-primary" (click)="addArticle(article)">Buy</button>
         </tr>
     </tbody>
 </table>

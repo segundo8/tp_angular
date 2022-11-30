@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { article } from './articles';
+import { TecnoworldCartService } from '../tecnoworld-cart.service';
+import { Article } from './articles';
 
 @Component({
   selector: 'app-articles-list',
@@ -8,7 +9,7 @@ import { article } from './articles';
 })
 export class ArticlesListComponent {
 
-  articles: article[] = [
+  articles: Article[] = [
     {
       name : 'Iphone',
       category : 'Celulares',
@@ -42,13 +43,22 @@ export class ArticlesListComponent {
       addproduct : 0,
     }
   ];
+
+  constructor(private cart: TecnoworldCartService) {
+  }
+
+  addArticle(article: Article): void{
+    this.cart.addArticle(article);
+    article.quantity -= article.addproduct;
+    article.addproduct = 0;
+  }
  
-  upProduct(article: article): void {
+  upProduct(article: Article): void {
     if (article.quantity > article.addproduct)
       article.addproduct++;
   }
 
-  downProduct(article: article): void {
+  downProduct(article: Article): void {
     if (article.addproduct > 0)
       article.addproduct--;
   }
