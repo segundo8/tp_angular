@@ -15,7 +15,7 @@ export class ArticlesListComponent {
       category : 'Celulares',
       price : 1000,
       quantity : 15,
-      image : 'assets/img/iphone.png',
+      image : 'https://github.com/segundo8/tp_angular/blob/main/src/assets/img/iphone.png?raw=true',
       addproduct : 0,
     },
     {
@@ -23,7 +23,7 @@ export class ArticlesListComponent {
       category : 'Televisores',
       price : 500,
       quantity : 5,
-      image : 'assets/img/televisor.jpg',
+      image : 'https://github.com/segundo8/tp_angular/blob/main/src/assets/img/televisor.jpg?raw=true',
       addproduct : 0,
     },
     {
@@ -31,7 +31,7 @@ export class ArticlesListComponent {
       category : 'Tablets',
       price : 200,
       quantity : 1,
-      image : 'assets/img/tablet.png',
+      image : 'https://github.com/segundo8/tp_angular/blob/main/src/assets/img/tablet.png?raw=true',
       addproduct : 0,
     },
     {
@@ -39,7 +39,7 @@ export class ArticlesListComponent {
       category : 'Monitores',
       price : 150,
       quantity : 0,
-      image : 'assets/img/monitor.jpg',
+      image : 'https://github.com/segundo8/tp_angular/blob/main/src/assets/img/monitor.jpg?raw=true',
       addproduct : 0,
     }
   ];
