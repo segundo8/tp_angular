@@ -1,7 +1,7 @@
 <h3>Carrito</h3>
 
-<ul>
-    <li *ngFor="let articles of cartList">
+<ul class="list-group">
+    <li class="list-group-item list-group-item-info" *ngFor="let articles of cartList">
         {{articles.name}}: {{articles.addproduct}}
     </li>
 </ul>
